@@ -1,0 +1,192 @@
+/* background image */
+html{
+   background: url("../images/keyboard.jpg") center top no-repeat;
+   background-size: cover;
+   background-color: black;
+}
+
+/*create space between title and nav links */
+header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+   background-color: rgba(0, 0, 0, .8);
+}
+
+/* nav links inline & centered */
+nav{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+/* nav links format */
+nav a{
+   font-family: 'Roboto Condensed', sans-serif;
+   font-size: 20px;
+   text-decoration: none;
+   text-align: center;  
+   border-radius: 5px;
+   padding: 5px;
+   margin: 5px;
+   width: 80px; 
+   border: 2px solid white;
+}
+
+/* active page nav link appearance */
+.pageCurrent{
+   color: black;
+   background-color: white;  
+}
+
+/* remaining nav link appearance */
+.pageLink{
+   color: white;
+   background-color: none;
+}
+
+/* Name in header: largest font, push from left to match padding from flexbox centering */
+h1{
+   color: white;
+   font-size: 40px;
+   font-family: 'Roboto', sans-serif;
+   padding: 0 0 0 20px;
+}
+
+/* Page titles */
+h2{
+   text-align: center;
+   color:black;
+   font-size: 30px;
+   padding: 10px 0px;
+   font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* white card-style content area */
+.main{
+   background-color: rgb(255, 255, 255);
+   margin: 20px 20% 40px;
+   padding:10px 35px 35px 10px;
+   border-radius: 5px;
+   border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* biography text font and spacing */
+.main p{
+   font-size: 20px;
+   line-height: 1.2em;
+   margin: .75em;
+   font-family: 'Roboto', sans-serif;
+}
+
+/* biography image round */
+.profile{
+   height: 200px;
+   border-radius: 50%;
+   float:left;
+   margin: 20px 20px 20px 20px;
+}
+
+/* center portfolio thumbails */
+.flexContainer{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+/* container for thumbnails and hovering text */
+.portContainer{
+   height:300px;
+   width:300px;
+   margin: 20px;
+   position: relative;
+   display:inline-block;
+   border-radius: 5px;
+   box-shadow: 1px 1px 5px grey;
+   }
+
+/* portfolio thumbail images */
+.portImg{
+   position: relative;
+   border-radius: 5px;
+   height: 300px;
+   width:300px;
+   object-fit: cover;
+}
+
+/* portfolio thumbnail hovering text */
+div.portText{
+   position: absolute;
+   top:200px;
+   width:300px;
+   padding:5px 0px;
+   font-family: 'Roboto Condensed', sans-serif;
+   font-size: 20px;
+   text-align: center;
+   background-color: rgba(0, 0, 0, .8);
+}
+
+/* remove hyperlink underline  */
+a.portText{
+   color: white;
+   text-decoration: none;
+}
+
+/* wireframe image thumbails */
+.wire{
+   border-radius: 5px;
+   width:300px;
+   height:250px;
+   object-fit: fill;
+   margin: 20px;
+   box-shadow: 1px 1px 5px grey;
+}
+
+form{
+   margin:auto;
+   width:60%;
+}
+
+label{
+   font-family: 'Roboto', sans-serif;
+   font-size: 20px;
+   display: block;
+}
+
+input{
+   width: 100%;
+   display: block;
+   border: 2px solid grey;
+   border-radius: 5px;
+   margin:5px 0 15px 0;
+}
+
+textarea{
+   margin: 5px 0;
+   width: 100%;
+   display: block;
+   border: 2px solid grey;
+   border-radius: 5px;
+}
+
+button{
+   font-family: 'Roboto', sans-serif;
+   font-size: 20px;
+   border: 2px solid grey;
+   border-radius: 5px;
+}
+
+/* fix position at bottom, dark transparent color */
+footer{
+   position:fixed;
+   bottom: 0;
+   left:0;
+   width: 100%;
+   font-family: 'Roboto', sans-serif;
+   color: white;
+   font-size: 10px;
+   text-align: center;
+   background-color: rgba(0, 0, 0, .8);
+   padding: 10px;
+}
