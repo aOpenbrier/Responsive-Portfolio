@@ -63,17 +63,22 @@ h2{
    font-family: 'Roboto Condensed', sans-serif;
 }
 
-/* white card-style content area */
 .main{
+   padding: 20px;
+}
+
+/* white card-style content area */
+.card{
    background-color: rgb(255, 255, 255);
-   margin: 20px 20% 40px;
-   padding:10px 35px 35px 10px;
+   max-width: 960px;
+   box-sizing: border-box;
+   margin: auto;
+   padding:20px;
    border-radius: 5px;
-   border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 /* biography text font and spacing */
-.main p{
+.bio{
    font-size: 20px;
    line-height: 1.2em;
    margin: .75em;
@@ -85,7 +90,7 @@ h2{
    height: 200px;
    border-radius: 50%;
    float:left;
-   margin: 20px 20px 20px 20px;
+   margin: 20px;
 }
 
 /* center portfolio thumbails */
@@ -190,3 +195,15 @@ footer{
    background-color: rgba(0, 0, 0, .8);
    padding: 10px;
 }
+
+/* Responsive layout: tablets */
+@media only screen and (max-width: 768px) {
+.card{
+      width: 100%;
+      margin: auto;
+      box-sizing: border-box;
+   }
+}
+
+
+/* Responsive layout: phones */
