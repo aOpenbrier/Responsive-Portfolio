@@ -1,78 +1,91 @@
 /* background image */
 html{
-   background: url("../images/keyboard.jpg") center top no-repeat;
-   background-size: cover;
-   background-color: black;
+  background: url("../images/keyboard.jpg") center top no-repeat;
+  background-size: cover;
+  background-color: black;
 }
 
-/*create space between title and nav links */
+*, *:before, *:after {
+box-sizing: border-box;
+}
+
+/*Header: fixed to top, full width, space between name and nav links */
 header{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 20px;
-   background-color: rgba(0, 0, 0, .8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, .8);
+  width: 100vw;
+  position: fixed;
+  top:0;
+  z-index: 10;
 }
 
 /* nav links inline & centered */
 nav{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-
-/* nav links format */
-nav a{
-   font-family: 'Roboto Condensed', sans-serif;
-   font-size: 20px;
-   text-decoration: none;
-   text-align: center;  
-   border-radius: 5px;
-   padding: 5px;
-   margin: 5px;
-   width: 80px; 
-   border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* active page nav link appearance */
-.pageCurrent{
-   color: black;
-   background-color: white;  
+#pageCurrent{
+  color: black;
+  border: none;
+  padding: 7px;
+  background: white;
+  background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.9));  
 }
 
-/* remaining nav link appearance */
+/* Button style links */
 .pageLink{
-   color: white;
-   background-color: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;  
+  border-radius: 5px;
+  padding: 7px;
+  margin: 5px;
+  width: 90px; 
+  color:black;
+  background: rgb(155, 155, 155);
+  background: linear-gradient(rgb(255, 255, 255, .7), rgba(255, 255, 255, 0.8));
+
+}
+.pageLink:hover{
+  background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .8));
 }
 
-/* Name in header: largest font, push from left to match padding from flexbox centering */
+/* Name in header: */
 h1{
    color: white;
-   font-size: 40px;
+   font-size: 45px;
    font-family: 'Roboto', sans-serif;
-   padding: 0 0 0 20px;
 }
 
-/* Page titles */
+/* Card headline */
 h2{
    text-align: center;
    color:black;
-   font-size: 30px;
+   font-size: 35px;
    padding: 10px 0px;
    font-family: 'Roboto Condensed', sans-serif;
 }
 
+/*Area around card content*/
 .main{
-   padding: 20px;
+  min-height: 100vh;
+  padding-top: 104px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
 }
 
 /* white card-style content area */
 .card{
    background-color: rgb(255, 255, 255);
-   max-width: 960px;
-   box-sizing: border-box;
-   margin: auto;
+   width: 940px;
    padding:20px;
    border-radius: 5px;
 }
@@ -83,6 +96,7 @@ h2{
    line-height: 1.2em;
    margin: .75em;
    font-family: 'Roboto', sans-serif;
+   text-align: left;
 }
 
 /* biography image round */
@@ -93,49 +107,49 @@ h2{
    margin: 20px;
 }
 
-/* center portfolio thumbails */
+
+
+/* Container for portfolio links */
 .flexContainer{
    display: flex;
-   justify-content: center;
+   justify-content: space-evenly;
    flex-wrap: wrap;
 }
 
-/* container for thumbnails and hovering text */
+/* space between flex items */
+.flexBox{
+  margin: 10px;
+}
+
+/* box for thumbnails and hovering text */
 .portContainer{
-   height:300px;
+   height:225px;
    width:300px;
-   margin: 20px;
    position: relative;
-   display:inline-block;
    border-radius: 5px;
    box-shadow: 1px 1px 5px grey;
+   overflow: hidden;
    }
 
 /* portfolio thumbail images */
 .portImg{
-   position: relative;
    border-radius: 5px;
-   height: 300px;
    width:300px;
    object-fit: cover;
 }
 
 /* portfolio thumbnail hovering text */
-div.portText{
+.portText{
    position: absolute;
-   top:200px;
+   bottom: 0;
    width:300px;
-   padding:5px 0px;
+   padding: 1.75em 0px 0.25em;
    font-family: 'Roboto Condensed', sans-serif;
-   font-size: 20px;
+   font-size: 25px;
    text-align: center;
-   background-color: rgba(0, 0, 0, .8);
-}
-
-/* remove hyperlink underline  */
-a.portText{
-   color: white;
+   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
    text-decoration: none;
+   color: white;
 }
 
 /* wireframe image thumbails */
@@ -182,28 +196,107 @@ button{
    border-radius: 5px;
 }
 
+#backToTop{
+  visibility: hidden;
+  align-self: end;
+}
+
 /* fix position at bottom, dark transparent color */
 footer{
-   position:fixed;
-   bottom: 0;
-   left:0;
-   width: 100%;
-   font-family: 'Roboto', sans-serif;
-   color: white;
-   font-size: 10px;
-   text-align: center;
-   background-color: rgba(0, 0, 0, .8);
-   padding: 10px;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .8);
+  padding: 10px;
 }
 
-/* Responsive layout: tablets */
+/* DESKTOP RESPONSIVENESS~~~~~~~~~~~~~~~~*/
+@media only screen and (max-width: 980px){
+  .card{
+    width: 90%;
+  }
+  h1{
+    font-size: 5vw;
+  }
+  h2{
+    font-size: 4vw;
+  }
+  .portText{
+    font-size: 3vw;
+  }
+}
+/* TABLET LAYOUT~~~~~~~~~~~~~~~~*/
 @media only screen and (max-width: 768px) {
-.card{
-      width: 100%;
-      margin: auto;
-      box-sizing: border-box;
-   }
+  h1{
+    font-size: 6vw;
+  }
+
+  h2{
+    font-size: 5vw;
+  }
+  /* 2 COLUMNS FOR BOXES: */
+  .flexBox{
+    width: 44%;
+  }
+  .portContainer{
+    /*RESPONSIVE BOX SIZE 4:3 RATIO */
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%; 
+  }
+  .portImg{
+    width: 100%;
+    height: unset;
+  }
+  .portText{
+    width:100%;
+    font-size: 3vw;
+  }
 }
 
+/*MOBILE LAYOUT ~~~~~~~~~~~~~~~~~~~~*/
+@media only screen and (max-width: 640px){
+  header{
+    position: static;
+    flex-direction: column;
+    justify-content: flex-start;
+    width:100%;
+    padding: 10px;
+    }
+  h1{
+    font-size: 8vw;
+  }
+  .pageLink{
+    margin-top: 10px;
+  }
+  .main{
+    padding-top: 0;
+  }
+  .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+   }
+  h2{
+    font-size: 7vw;
+  }
+  .profile{
+    float: none;
+    margin: 0;
+  }
+  /* SINGLE COLUMN OF BOXES */
+  .flexBox{
+    width: 80%;
+  }
+  .portText{
+    font-size: 5vw;
+  }
+  #backToTop{
+    visibility: visible;
+    margin: 20px;
+  }
 
-/* Responsive layout: phones */
+}
