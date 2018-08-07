@@ -107,8 +107,6 @@ h2{
    margin: 20px;
 }
 
-
-
 /* Container for portfolio links */
 .flexContainer{
    display: flex;
@@ -123,19 +121,19 @@ h2{
 
 /* box for thumbnails and hovering text */
 .portContainer{
-   height:225px;
-   width:300px;
-   position: relative;
-   border-radius: 5px;
-   box-shadow: 1px 1px 5px grey;
-   overflow: hidden;
-   }
+  height:225px;
+  width:300px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px grey;
+  overflow: hidden;
+}
 
 /* portfolio thumbail images */
 .portImg{
-   border-radius: 5px;
-   width:300px;
-   object-fit: cover;
+  border-radius: 5px;
+  width:300px;
+  object-fit: cover;
 }
 
 /* portfolio thumbnail hovering text */
@@ -165,35 +163,39 @@ h2{
 form{
    margin:auto;
    width:60%;
+   text-align: center;
 }
 
 label{
-   font-family: 'Roboto', sans-serif;
-   font-size: 20px;
-   display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  display: block;
 }
 
 input{
-   width: 100%;
-   display: block;
-   border: 2px solid grey;
-   border-radius: 5px;
-   margin:5px 0 15px 0;
+  width: 100%;
+  display: block;
+  border: 2px solid grey;
+  border-radius: 5px;
+  margin:5px 0 15px 0;
 }
 
 textarea{
-   margin: 5px 0;
-   width: 100%;
-   display: block;
-   border: 2px solid grey;
-   border-radius: 5px;
+  margin: 5px 0;
+  width: 100%;
+  display: block;
+  border: 2px solid grey;
+  border-radius: 5px;
 }
 
 button{
-   font-family: 'Roboto', sans-serif;
-   font-size: 20px;
-   border: 2px solid grey;
-   border-radius: 5px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  background: linear-gradient(#e1e1e1, #afafaf);
 }
 
 #backToTop{
