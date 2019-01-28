@@ -1,0 +1,304 @@
+/* background image */
+html{
+  background: url("../images/keyboard.jpg") center top no-repeat;
+  background-size: cover;
+  background-color: black;
+}
+
+*, *:before, *:after {
+box-sizing: border-box;
+}
+
+/*Header: fixed to top, full width, space between name and nav links */
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, .8);
+  width: 100vw;
+  position: fixed;
+  top:0;
+  z-index: 10;
+}
+
+/* nav links inline & centered */
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* active page nav link appearance */
+#pageCurrent{
+  color: black;
+  border: none;
+  padding: 7px;
+  background: white;
+  background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.9));  
+}
+
+/* Button style links */
+.pageLink{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;  
+  border-radius: 5px;
+  padding: 7px;
+  margin: 5px;
+  width: 90px; 
+  color:black;
+  background: rgb(155, 155, 155);
+  background: linear-gradient(rgb(255, 255, 255, .7), rgba(255, 255, 255, 0.8));
+
+}
+.pageLink:hover{
+  background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .8));
+}
+
+/* Name in header: */
+h1{
+   color: white;
+   font-size: 45px;
+   font-family: 'Roboto', sans-serif;
+}
+
+/* Card headline */
+h2{
+   text-align: center;
+   color:black;
+   font-size: 35px;
+   padding: 10px 0px;
+   font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*Area around card content*/
+.main{
+  min-height: 100vh;
+  padding-top: 104px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
+}
+
+/* white card-style content area */
+.card{
+   background-color: rgb(255, 255, 255);
+   width: 940px;
+   padding:20px;
+   border-radius: 5px;
+}
+
+/* biography text font and spacing */
+.bio{
+   font-size: 20px;
+   line-height: 1.2em;
+   margin: .75em;
+   font-family: 'Roboto', sans-serif;
+   text-align: left;
+}
+
+/* biography image round */
+.profile{
+   height: 200px;
+   border-radius: 50%;
+   float:left;
+   margin: 20px;
+}
+
+/* Container for portfolio links */
+.flexContainer{
+   display: flex;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+}
+
+/* space between flex items */
+.flexBox{
+  margin: 10px;
+}
+
+/* box for thumbnails and hovering text */
+.portContainer{
+  height:225px;
+  width:300px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px grey;
+  overflow: hidden;
+}
+
+/* portfolio thumbail images */
+.portImg{
+  border-radius: 5px;
+  width:300px;
+  object-fit: cover;
+}
+
+/* portfolio thumbnail hovering text */
+.portText{
+   position: absolute;
+   bottom: 0;
+   width:300px;
+   padding: 1.75em 0px 0.25em;
+   font-family: 'Roboto Condensed', sans-serif;
+   font-size: 25px;
+   text-align: center;
+   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+   text-decoration: none;
+   color: white;
+}
+
+/* wireframe image thumbails */
+.wire{
+   border-radius: 5px;
+   width:300px;
+   height:250px;
+   object-fit: fill;
+   margin: 20px;
+   box-shadow: 1px 1px 5px grey;
+}
+
+form{
+   margin:auto;
+   width:60%;
+   text-align: center;
+}
+
+label{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  display: block;
+}
+
+input{
+  width: 100%;
+  display: block;
+  border: 2px solid grey;
+  border-radius: 5px;
+  margin:5px 0 15px 0;
+}
+
+textarea{
+  margin: 5px 0;
+  width: 100%;
+  display: block;
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+
+button{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  background: linear-gradient(#e1e1e1, #afafaf);
+}
+
+#backToTop{
+  visibility: hidden;
+  align-self: end;
+}
+
+/* fix position at bottom, dark transparent color */
+footer{
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .8);
+  padding: 10px;
+}
+
+/* DESKTOP RESPONSIVENESS~~~~~~~~~~~~~~~~*/
+@media only screen and (max-width: 980px){
+  .card{
+    width: 90%;
+  }
+  h1{
+    font-size: 5vw;
+  }
+  h2{
+    font-size: 4vw;
+  }
+  .portText{
+    font-size: 3vw;
+  }
+}
+/* TABLET LAYOUT~~~~~~~~~~~~~~~~*/
+@media only screen and (max-width: 768px) {
+  h1{
+    font-size: 6vw;
+  }
+
+  h2{
+    font-size: 5vw;
+  }
+  /* 2 COLUMNS FOR BOXES: */
+  .flexBox{
+    width: 44%;
+  }
+  .portContainer{
+    /*RESPONSIVE BOX SIZE 4:3 RATIO */
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%; 
+  }
+  .portImg{
+    width: 100%;
+    height: unset;
+  }
+  .portText{
+    width:100%;
+    font-size: 3vw;
+  }
+}
+
+/*MOBILE LAYOUT ~~~~~~~~~~~~~~~~~~~~*/
+@media only screen and (max-width: 640px){
+  header{
+    position: static;
+    flex-direction: column;
+    justify-content: flex-start;
+    width:100%;
+    padding: 10px;
+    }
+  h1{
+    font-size: 8vw;
+  }
+  .pageLink{
+    margin-top: 10px;
+  }
+  .main{
+    padding-top: 0;
+  }
+  .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+   }
+  h2{
+    font-size: 7vw;
+  }
+  .profile{
+    float: none;
+    margin: 0;
+  }
+  /* SINGLE COLUMN OF BOXES */
+  .flexBox{
+    width: 80%;
+  }
+  .portText{
+    font-size: 5vw;
+  }
+  #backToTop{
+    visibility: visible;
+    margin: 20px;
+  }
+
+}
